@@ -1,0 +1,4 @@
+requests
+pytest
+pytest-cache
+pytest-xdist
