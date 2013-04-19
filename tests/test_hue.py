@@ -158,6 +158,7 @@ def test_light_state(lights):
 def test_put_state(lights):
     # Sleeps in here for now since going too fast breaks it
     for light in lights:
+        light.put_state(on=True)
         light.put_state(bri=1)
         sleep(.1)
         light.get()
@@ -166,3 +167,4 @@ def test_put_state(lights):
         sleep(.1)
         light.get()
         assert light.state['bri'] == 100
+        light.put_state(on=False)
